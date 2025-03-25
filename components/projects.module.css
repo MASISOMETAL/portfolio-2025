@@ -1,0 +1,111 @@
+.projects {
+  background-color: var(--background-color);
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.sectionDescription {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  color: var(--dark-gray);
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+.projectCard {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background-color: var(--light-gray);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.projectImageContainer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.projectContent {
+  padding: 1.5rem;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.projectDescription {
+  color: var(--dark-gray);
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.projectSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.skillTag {
+  background-color: rgba(74, 108, 247, 0.1);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.projectLink {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.projectLink:hover {
+  background-color: #3a5bd9;
+}
+
+@media (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
