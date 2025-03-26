@@ -39,7 +39,7 @@ export default function TechnicalSkills({ lan }: Params) {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      viewport={{ amount: 0.2 }}
+      viewport={{ amount: 0.1 }}
     >
       <section id="skills" className={styles.skills}>
         <div className="container">
