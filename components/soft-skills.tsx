@@ -1,5 +1,6 @@
 import { language } from "@/lib/language"
 import styles from "./soft-skills.module.css"
+import { motion } from "framer-motion";
 
 type SoftSkill = {
   title: string
@@ -49,24 +50,31 @@ export default function SoftSkills({ lan }: Params) {
   ]
 
   return (
-    <section id="soft-skills" className={styles.softSkills}>
-      <div className="container">
-        <h2 className={styles.sectionTitle}>{currentLanguage.softSkillTitleGral}</h2>
-        <p className={styles.sectionDescription}>
-          {currentLanguage.softSkillSubTitleGral}
-        </p>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ amount: 0.2 }}
+    >
+      <section id="soft-skills" className={styles.softSkills}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>{currentLanguage.softSkillTitleGral}</h2>
+          <p className={styles.sectionDescription}>
+            {currentLanguage.softSkillSubTitleGral}
+          </p>
 
-        <div className={styles.skillsGrid}>
-          {softSkills.map((skill, index) => (
-            <div key={index} className={styles.skillCard}>
-              <div className={styles.skillIcon}>{skill.icon}</div>
-              <h3 className={styles.skillTitle}>{skill.title}</h3>
-              <p className={styles.skillDescription}>{skill.description}</p>
-            </div>
-          ))}
+          <div className={styles.skillsGrid}>
+            {softSkills.map((skill, index) => (
+              <div key={index} className={styles.skillCard}>
+                <div className={styles.skillIcon}>{skill.icon}</div>
+                <h3 className={styles.skillTitle}>{skill.title}</h3>
+                <p className={styles.skillDescription}>{skill.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </motion.div>
   )
 }
 

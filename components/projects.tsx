@@ -2,6 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import styles from "./projects.module.css"
 import { language } from "@/lib/language"
+import { motion } from "framer-motion";
+
 
 type Project = {
   title: string
@@ -64,56 +66,63 @@ export default function Projects({ lan }: Params) {
   ]
 
   return (
-    <section id="projects" className={styles.projects}>
-      <div className="container">
-        <h2 className={styles.sectionTitle}>{currentLanguage.projectsTitleGral}</h2>
-        <p className={styles.sectionDescription}>
-          {currentLanguage.projectSubTitleGral}
-        </p>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ amount: 0.2 }}
+    >
+      <section id="projects" className={styles.projects}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>{currentLanguage.projectsTitleGral}</h2>
+          <p className={styles.sectionDescription}>
+            {currentLanguage.projectSubTitleGral}
+          </p>
 
-        <div className={styles.projectsGrid}>
-          {projects.map((project, index) => (
-            <div key={index} className={styles.projectCard}>
-              <div className={styles.projectImageContainer}>
-                <Image
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  width={500}
-                  height={300}
-                  className={styles.projectImage}
-                />
-              </div>
-              <div className={styles.projectContent}>
-                <h3 className={styles.projectTitle}>{project.title}</h3>
-                <p className={styles.projectDescription}>{project.description}</p>
-
-                <div className={styles.projectSkills}>
-                  {project.skills.map((skill, skillIndex) => (
-                    <span key={skillIndex} className={styles.skillTag}>
-                      {skill}
-                    </span>
-                  ))}
+          <div className={styles.projectsGrid}>
+            {projects.map((project, index) => (
+              <div key={index} className={styles.projectCard}>
+                <div className={styles.projectImageContainer}>
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    width={500}
+                    height={300}
+                    className={styles.projectImage}
+                  />
                 </div>
+                <div className={styles.projectContent}>
+                  <h3 className={styles.projectTitle}>{project.title}</h3>
+                  <p className={styles.projectDescription}>{project.description}</p>
 
-                <div className={styles.projectLinks}>
-                  <Link
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.projectLink}
-                  >
-                    GitHub
-                  </Link>
-                  <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-                    Demo
-                  </Link>
+                  <div className={styles.projectSkills}>
+                    {project.skills.map((skill, skillIndex) => (
+                      <span key={skillIndex} className={styles.skillTag}>
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className={styles.projectLinks}>
+                    <Link
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.projectLink}
+                    >
+                      GitHub
+                    </Link>
+                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
+                      Demo
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </motion.div>
   )
 }
 

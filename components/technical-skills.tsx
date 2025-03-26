@@ -1,5 +1,6 @@
 import { language } from "@/lib/language"
 import styles from "./technical-skills.module.css"
+import { motion } from "framer-motion";
 
 type Skill = {
   name: string
@@ -33,22 +34,29 @@ export default function TechnicalSkills({ lan }: Params) {
   ]
 
   return (
-    <section id="skills" className={styles.skills}>
-      <div className="container">
-        <h2 className={styles.sectionTitle}>{currentLanguage.tecHabTitle}</h2>
-        <p className={styles.sectionDescription}>{currentLanguage.tecHabSubtitle}</p>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ amount: 0.2 }}
+    >
+      <section id="skills" className={styles.skills}>
+        <div className="container">
+          <h2 className={styles.sectionTitle}>{currentLanguage.tecHabTitle}</h2>
+          <p className={styles.sectionDescription}>{currentLanguage.tecHabSubtitle}</p>
 
-        <div className={styles.skillsGrid}>
-          {skills.map((skill, index) => (
-            <div key={index} className={styles.skillCard}>
-              <div className={styles.skillIcon}>{skill.icon}</div>
-              <h3 className={styles.skillName}>{skill.name}</h3>
-              {skill.category && <span className={styles.skillCategory}>{skill.category}</span>}
-            </div>
-          ))}
+          <div className={styles.skillsGrid}>
+            {skills.map((skill, index) => (
+              <div key={index} className={styles.skillCard}>
+                <div className={styles.skillIcon}>{skill.icon}</div>
+                <h3 className={styles.skillName}>{skill.name}</h3>
+                {skill.category && <span className={styles.skillCategory}>{skill.category}</span>}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </motion.div>
   )
 }
 
