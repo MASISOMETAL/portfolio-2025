@@ -20,7 +20,7 @@ export default function Banner({ lan }: Params) {
             {currentLanguage.descripcionGral}
           </p>
           <a href="./cv.pdf" download="CV Cristian Farias" className={styles.contactButton}>
-            {currentLanguage.contactoNav}
+            {currentLanguage.cvDownload}
           </a>
         </div>
         <div className={styles.imageContainer}>
