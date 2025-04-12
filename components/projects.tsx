@@ -40,6 +40,14 @@ export default function Projects({ lan }: Params) {
       liveUrl: "https://ecommerce-nuts.netlify.app/",
     },
     {
+      title: currentLanguage.projectsTitles[5],
+      description: currentLanguage.projectDescription[5],
+      image: "/img-netcris.png?height=300&width=500",
+      skills: ["Next js", "React", "TypeScript"],
+      githubUrl: "https://netcris.netlify.app/",
+      liveUrl: "https://github.com/MASISOMETAL/clone-netcris",
+    },
+    {
       title: currentLanguage.projectsTitles[2],
       description: currentLanguage.projectDescription[2],
       image: "/pokedle.jpg?height=300&width=500",
