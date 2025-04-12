@@ -44,8 +44,16 @@ export default function Projects({ lan }: Params) {
       description: currentLanguage.projectDescription[5],
       image: "/img-netcris.png?height=300&width=500",
       skills: ["Next js", "React", "TypeScript"],
-      githubUrl: "https://netcris.netlify.app/",
-      liveUrl: "https://github.com/MASISOMETAL/clone-netcris",
+      githubUrl: "https://github.com/MASISOMETAL/clone-netcris",
+      liveUrl: "https://netcris.netlify.app/",
+    },
+    {
+      title: currentLanguage.projectsTitles[6],
+      description: currentLanguage.projectDescription[6],
+      image: "/img-portfolio.png?height=300&width=500",
+      skills: ["HTML", "CSS", "Javascript"],
+      githubUrl: "https://github.com/MASISOMETAL/portfolio-vanilla",
+      liveUrl: "https://portfolio-cris-vanilla.netlify.app/",
     },
     {
       title: currentLanguage.projectsTitles[2],

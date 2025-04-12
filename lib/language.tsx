@@ -45,7 +45,7 @@ export const language = {
     contactMsgSubmitError: "Hubo un error al enviar tu mensaje. Por favor, intenta nuevamente más tarde.",
     copy: "Todos los derechos reservados.",
     footerMsg: "Diseñado y construido con",
-    projectsTitles: ["Fixture Creator", "Ecommerce Nuts", "Pokecrisdle", "Movistar gestor de ventas" , "Piedra Papel y Tijera", "Clon de Netflix"],
+    projectsTitles: ["Fixture Creator", "Ecommerce Nuts", "Pokecrisdle", "Movistar gestor de ventas" , "Piedra Papel y Tijera", "Clon de Netflix", "Portfolio Vanilla"],
     projectDescription: [
       "Una app creada para crear fixtures de partidos de competición.",
       "Una página web dedicada al comercio de productos de frutos secos.",
@@ -53,6 +53,7 @@ export const language = {
       "Una app mobile de movistar para gestionar las ventas del equipo, con gestion de usuarios y administrador",
       "Una app mobile con el clasico juego de piedra papel y tijera.",
       "Una página clonando la pagina de netflix",
+      "Portfolio creado unicamente con HTML, CSS y Javascript"
     ]
   },
   "en": {
@@ -101,7 +102,7 @@ export const language = {
     contactMsgSubmitError: "There was an error sending your message. Please try again later.",
     copy: "All rights reserved.",
     footerMsg: "Designed and built with",
-    projectsTitles: ["Fixture Creator", "Ecommerce Nuts", "Pokecrisdle", "Movistar Sales Manager" , "Rock Paper Scissors", "Clone Netflix"],
+    projectsTitles: ["Fixture Creator", "Ecommerce Nuts", "Pokecrisdle", "Movistar Sales Manager" , "Rock Paper Scissors", "Clone Netflix", "Portfolio Vanilla"],
     projectDescription: [
       "An app created to create competitive match fixtures.",
       "A website dedicated to the trade of dried fruit products.",
@@ -109,6 +110,7 @@ export const language = {
       "A Movistar mobile app for managing team sales, with user and administrator management.",
       "A mobile app with the classic game of rock, paper, scissors.",
       "A page cloning the Netflix page",
+      "Portfolio created solely with HTML, CSS and Javascript"
     ]
   }
 }
